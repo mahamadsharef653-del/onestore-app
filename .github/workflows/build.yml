@@ -15,9 +15,9 @@ jobs:
 
     - name: Download WebView Template
       run: |
-        curl -L -o template.zip https://github.com/vimalcvs/Android-WebView-App-Template/archive/refs/heads/master.zip
+        curl -L -o template.zip https://github.com/vimalcvs/Android-WebView-App-Template/archive/refs/heads/main.zip
         unzip template.zip
-        mv Android-WebView-App-Template-master template
+        mv Android-WebView-App-Template-main template
         rm -rf template/app/src/main/assets/*
         cp -r * template/app/src/main/assets/ || true
 
