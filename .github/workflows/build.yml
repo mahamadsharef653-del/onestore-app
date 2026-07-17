@@ -13,12 +13,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Download Build Tools
+    - name: Download WebView Template
       run: |
-        git clone --depth=1 https://github.com/vimalcvs/Android-WebView-App-Template.git template
+        curl -L -o template.zip https://github.com/vimalcvs/Android-WebView-App-Template/archive/refs/heads/master.zip
+        unzip template.zip
+        mv Android-WebView-App-Template-master template
         rm -rf template/app/src/main/assets/*
         cp -r * template/app/src/main/assets/ || true
-        rm -rf template/app/src/main/assets/template
 
     - name: Build APK with Gradle
       run: |
