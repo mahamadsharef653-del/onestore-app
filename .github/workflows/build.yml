@@ -13,9 +13,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Clone WebView Template
+    - name: Download Build Tools
       run: |
-        git clone https://github.com/flycrane801/Android-WebView-App-Template.git template
+        git clone --depth=1 https://github.com/vimalcvs/Android-WebView-App-Template.git template
         rm -rf template/app/src/main/assets/*
         cp -r * template/app/src/main/assets/ || true
         rm -rf template/app/src/main/assets/template
