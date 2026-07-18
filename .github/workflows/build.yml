@@ -13,9 +13,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Download WebView Template
+    - name: Download Stable WebView
       run: |
-        curl -L -o template.zip https://github.com/vimalcvs/Android-WebView-App-Template/archive/refs/heads/main.zip
+        curl -L -o template.zip https://codeload.github.com/vimalcvs/Android-WebView-App-Template/zip/refs/heads/main
         unzip template.zip
         mv Android-WebView-App-Template-main template
         rm -rf template/app/src/main/assets/*
